@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="rosaya">
+    <link name="Link1">
+        <inertial>
+            <origin xyz="-0.0140451869769055 -0.000102443179340418 0.424212396380785" rpy="0 0 0" />
+            <mass value="0.264483114754865" />
+            <inertia ixx="0.000377148965233948" ixy="2.59945995321329E-08" ixz="8.2690099127401E-06" iyy="0.000206025340153956" iyz="1.60054464463609E-07" izz="0.00033779728518876" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/Link1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/Link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Link2">
+        <inertial>
+            <origin xyz="-0.0275163486490869 0.000225038484028661 -0.039852662943905" rpy="0 0 0" />
+            <mass value="0.266759815938641" />
+            <inertia ixx="0.000201939143646351" ixy="-2.02604473576344E-07" ixz="-2.92452499794778E-07" iyy="6.97314124612398E-05" iyz="-6.70715099069117E-07" izz="0.000208906968608255" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/Link2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/Link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint1" type="continuous">
+        <origin xyz="0.0150416145062784 -0.000145225937100715 0.375282029235617" rpy="-0.00310746977134566 0 0" />
+        <parent link="Link1" />
+        <child link="Link2" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="Link3">
+        <inertial>
+            <origin xyz="-0.0108043634184129 2.1660997990558E-06 -0.0246321946172633" rpy="0 0 0" />
+            <mass value="0.141461102552141" />
+            <inertia ixx="2.39627133598282E-05" ixy="2.90037379200106E-09" ixz="1.82744544212635E-07" iyy="3.84330097232021E-05" iyz="-3.81895596641216E-11" izz="3.16699542466875E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/Link3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/Link3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint2" type="continuous">
+        <origin xyz="-0.0150417125919951 0.000171249925764887 -0.0551096819554042" rpy="0.00310746977134566 0 0" />
+        <parent link="Link2" />
+        <child link="Link3" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="L-Link">
+        <inertial>
+            <origin xyz="2.50323684336529E-07 7.44298438559027E-08 -0.009497265940245" rpy="0 0 0" />
+            <mass value="0.00620476919773645" />
+            <inertia ixx="1.16709532356446E-06" ixy="2.24128152223598E-14" ixz="-1.3175404228875E-11" iyy="4.70615058588183E-06" iyz="-3.91750100006157E-12" izz="4.36737368608336E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint3" type="continuous">
+        <origin xyz="0 0.045659264836335 -0.0460755308216049" rpy="0 0 -0.000200463315012628" />
+        <parent link="Link3" />
+        <child link="L-Link" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="L-Link1">
+        <inertial>
+            <origin xyz="0.0042735206123182 -0.000309348250411437 -0.0151747345156474" rpy="0 0 0" />
+            <mass value="0.186396401372012" />
+            <inertia ixx="7.83299289692851E-05" ixy="3.05121818831684E-12" ixz="-1.95916960725838E-07" iyy="7.66988314756653E-05" iyz="1.61633318765243E-07" izz="4.72447757065841E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint5" type="continuous">
+        <origin xyz="-0.0294500000000014 0 -0.0339141545469447" rpy="0.000537539761406673 0 0" />
+        <parent link="L-Link" />
+        <child link="L-Link1" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="L-Link2">
+        <inertial>
+            <origin xyz="-0.000485947927418739 0.0245791199167028 -0.0913077482560079" rpy="0 0 0" />
+            <mass value="0.099078818149938" />
+            <inertia ixx="4.93824228389882E-05" ixy="-2.94635540720517E-09" ixz="-1.12132818777153E-07" iyy="3.6564094548438E-05" iyz="-1.06282556014621E-06" izz="2.89120074625432E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint7" type="continuous">
+        <origin xyz="0.0294200000000001 -0.0244999999999996 0" rpy="0 0 0" />
+        <parent link="L-Link1" />
+        <child link="L-Link2" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="L-Link3">
+        <inertial>
+            <origin xyz="0.009329 0.026035 -0.033682" rpy="0 0 0" />
+            <mass value="0.019358" />
+            <inertia ixx="3.0038E-05" ixy="1.7888E-20" ixz="-4.1614E-06" iyy="2.1437E-05" iyz="1.9568E-19" izz="1.5434E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint9" type="continuous">
+        <origin xyz="-0.000558037765886032 -0.00140000000000197 -0.112828252884564" rpy="0 -0.000303003582677282 0" />
+        <parent link="L-Link2" />
+        <child link="L-Link3" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="L-Link4">
+        <inertial>
+            <origin xyz="-0.022933 0.025987 0.015294" rpy="0 0 0" />
+            <mass value="0.18164" />
+            <inertia ixx="7.5271E-05" ixy="9.7469E-14" ixz="1.0704E-06" iyy="7.4761E-05" iyz="-1.0645E-06" izz="4.691E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint11" type="continuous">
+        <origin xyz="0 0 -0.0949999999999996" rpy="0 0.000302748335169453 0" />
+        <parent link="L-Link3" />
+        <child link="L-Link4" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="L-Link5">
+        <inertial>
+            <origin xyz="0.0279100000022217 0.00784814161879406 -0.0292680262318619" rpy="0 0 0" />
+            <mass value="0.0728910331350739" />
+            <inertia ixx="3.3319713195748E-05" ixy="-2.71243635754698E-14" ixz="8.07318387672416E-16" iyy="0.000102630001589936" iyz="1.64946567577731E-12" izz="0.000132875198487611" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/L-Link5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint13" type="continuous">
+        <origin xyz="-0.0236 0.026 0" rpy="0 0 0" />
+        <parent link="L-Link4" />
+        <child link="L-Link5" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="R-Link">
+        <inertial>
+            <origin xyz="2.50323684336529E-07 7.44298438437596E-08 -0.00949726594024497" rpy="0 0 0" />
+            <mass value="0.00620476919773645" />
+            <inertia ixx="1.16709532356444E-06" ixy="2.24128175080407E-14" ixz="-1.31754042239514E-11" iyy="4.70615058588182E-06" iyz="-3.91750099838842E-12" izz="4.36737368608336E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint4" type="continuous">
+        <origin xyz="0 -0.0456592648363355 -0.0460755308216101" rpy="0 0 -0.000200463315012628" />
+        <parent link="Link3" />
+        <child link="R-Link" />
+        <axis xyz="0 0 1" />
+    </joint>
+    <link name="R-Link1">
+        <inertial>
+            <origin xyz="0.00657534599947679 0.000309355310370241 -0.0151747345156469" rpy="0 0 0" />
+            <mass value="0.186396401372012" />
+            <inertia ixx="7.8329928969285E-05" ixy="3.05121820417886E-12" ixz="-1.95917088531605E-07" iyy="7.66988314756652E-05" iyz="-1.62133778034556E-07" izz="4.72447757065841E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint6" type="continuous">
+        <origin xyz="-0.0317499999999999 0 -0.0339141545469453" rpy="0.000537539765574113 0 0" />
+        <parent link="R-Link" />
+        <child link="R-Link1" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="R-Link2">
+        <inertial>
+            <origin xyz="-2.80111859402993E-05 -0.0245791212735315 -0.0912599475740593" rpy="0 0 0" />
+            <mass value="0.0990788181535518" />
+            <inertia ixx="4.938303127945E-05" ixy="2.31024992829725E-09" ixz="-7.60281236107666E-09" iyy="3.65640945538292E-05" iyz="1.06282733006272E-06" izz="2.89113990286086E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint8" type="continuous">
+        <origin xyz="0.031720000000165 0.0245000000000003 -4.90873395437297E-05" rpy="0 0 0" />
+        <parent link="R-Link1" />
+        <child link="R-Link2" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="R-Link3">
+        <inertial>
+            <origin xyz="0.00932898252848981 -0.0260353980000001 -0.0336820846638228" rpy="0 0 0" />
+            <mass value="0.0193582268613659" />
+            <inertia ixx="3.00375992034434E-05" ixy="-2.70537691141593E-20" ixz="-4.16144770137387E-06" iyy="2.14370365193726E-05" iyz="1.89169849475357E-19" izz="1.54337749388988E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint10" type="continuous">
+        <origin xyz="0 0.0014000000000008 -0.11278054553733" rpy="0 0 0" />
+        <parent link="R-Link2" />
+        <child link="R-Link3" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="R-Link4">
+        <inertial>
+            <origin xyz="-0.0229297046524727 -0.0259903394419934 0.0152938399563269" rpy="0 0 0" />
+            <mass value="0.181636798072371" />
+            <inertia ixx="7.52711328540777E-05" ixy="9.74687016375923E-14" ixz="1.07371232217997E-06" iyy="7.47613827389575E-05" iyz="1.06118741885682E-06" izz="4.69098321095376E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint12" type="continuous">
+        <origin xyz="0 0 -0.0949999999999999" rpy="0 0 0" />
+        <parent link="R-Link3" />
+        <child link="R-Link4" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="R-Link5">
+        <inertial>
+            <origin xyz="0.0279100000022243 -0.0078481017426564 -0.029268026231862" rpy="0 0 0" />
+            <mass value="0.0728910331350747" />
+            <inertia ixx="3.33197131957481E-05" ixy="-2.71241916683133E-14" ixz="8.07255019629847E-16" iyy="0.000102630001589937" iyz="1.64946567094868E-12" izz="0.000132875198487612" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://rosaya/meshes/R-Link5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint14" type="continuous">
+        <origin xyz="-0.0235999999999946 -0.0260000000000017 0" rpy="0 0 0" />
+        <parent link="R-Link4" />
+        <child link="R-Link5" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <transmission name="trans_Joint1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint1_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint2_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint3">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint3_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint5">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint5_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint7">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint7">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint7_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint9">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint9">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint9_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint11">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint11">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint11_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint13">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint13">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint13_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint4">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint4_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint6">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint6">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint6_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint8">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint8">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint8_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint10">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint10">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint10_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint12">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint12">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint12_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_Joint14">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint14">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="Joint14_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+

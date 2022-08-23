@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find rosaya_moveit)/config/ros_controllers.yaml" command="load"/>
+
+  <!-- Load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="kaki_controller kanan_controller kiri_controller telapak_kaki_controller ext_kanan_controller ext_kiri_controller vel_kanan vel_kiri vel_ext_kanan vel_ext_kiri "/>
+
+</launch>
