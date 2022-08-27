@@ -1,20 +1,4 @@
 controller_list:
-  - name: fake_kaki_controller
-    type: $(arg fake_execution_type)
-    joints:
-      - Joint2
-      - Joint3
-      - Joint5
-      - Joint7
-      - Joint9
-      - Joint11
-      - Joint13
-      - Joint4
-      - Joint6
-      - Joint8
-      - Joint10
-      - Joint12
-      - Joint14
   - name: fake_kanan_controller
     type: $(arg fake_execution_type)
     joints:
@@ -33,22 +17,7 @@ controller_list:
       - Joint9
       - Joint11
       - Joint13
-  - name: fake_telapak_kaki_controller
-    type: $(arg fake_execution_type)
-    joints:
-      - Joint13
-      - Joint14
-  - name: fake_ext_kanan_controller
-    type: $(arg fake_execution_type)
-    joints:
-      - Joint2
-      - Joint4
-      - Joint6
-      - Joint8
-      - Joint10
-      - Joint12
-      - Joint14
-  - name: fake_ext_kiri_controller
+  - name: fake_kaki_full_controller
     type: $(arg fake_execution_type)
     joints:
       - Joint2
@@ -58,16 +27,16 @@ controller_list:
       - Joint9
       - Joint11
       - Joint13
+      - Joint4
+      - Joint6
+      - Joint8
+      - Joint10
+      - Joint12
+      - Joint14
 initial:  # Define initial robot poses per group
-  - group: kaki
-    pose: berdiri
   - group: kanan
     pose: berdiri
   - group: kiri
     pose: berdiri
-  - group: telapak_kaki
-    pose: berdiri
-  - group: ext_kanan
-    pose: berdiri
-  - group: ext_kiri
+  - group: kaki_full
     pose: berdiri

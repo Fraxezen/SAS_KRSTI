@@ -1,22 +1,4 @@
 controller_list:
-  - name: kaki_controller
-    action_ns: follow_joint_trajectory
-    type: FollowJointTrajectory
-    default: True
-    joints:
-      - Joint2
-      - Joint3
-      - Joint5
-      - Joint7
-      - Joint9
-      - Joint11
-      - Joint13
-      - Joint4
-      - Joint6
-      - Joint8
-      - Joint10
-      - Joint12
-      - Joint14
   - name: kanan_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
@@ -39,26 +21,7 @@ controller_list:
       - Joint9
       - Joint11
       - Joint13
-  - name: telapak_kaki_controller
-    action_ns: follow_joint_trajectory
-    type: FollowJointTrajectory
-    default: True
-    joints:
-      - Joint13
-      - Joint14
-  - name: ext_kanan_controller
-    action_ns: follow_joint_trajectory
-    type: FollowJointTrajectory
-    default: True
-    joints:
-      - Joint2
-      - Joint4
-      - Joint6
-      - Joint8
-      - Joint10
-      - Joint12
-      - Joint14
-  - name: ext_kiri_controller
+  - name: kaki_full_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
@@ -70,7 +33,13 @@ controller_list:
       - Joint9
       - Joint11
       - Joint13
-  - name: vel_kanan
+      - Joint4
+      - Joint6
+      - Joint8
+      - Joint10
+      - Joint12
+      - Joint14
+  - name: r_pos
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
@@ -81,7 +50,7 @@ controller_list:
       - Joint10
       - Joint12
       - Joint14
-  - name: vel_kiri
+  - name: l_pos
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
@@ -92,24 +61,22 @@ controller_list:
       - Joint9
       - Joint11
       - Joint13
-  - name: vel_ext_kanan
+  - name: r_vel
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
     joints:
-      - Joint2
       - Joint4
       - Joint6
       - Joint8
       - Joint10
       - Joint12
       - Joint14
-  - name: vel_ext_kiri
+  - name: l_vel
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
     joints:
-      - Joint2
       - Joint3
       - Joint5
       - Joint7

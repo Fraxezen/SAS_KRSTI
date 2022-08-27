@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: rosaya
+    relative_path: urdf/rosaya.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/rosaya.srdf
+  CONFIG:
+    author_name: Frx
+    author_email: Frx@gmail.com
+    generated_timestamp: 1661621845

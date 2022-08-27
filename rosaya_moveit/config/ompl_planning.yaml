@@ -127,35 +127,6 @@ planner_configs:
     sparse_delta_fraction: 0.25  # delta fraction for connection distance. This value represents the visibility range of sparse samples. default: 0.25
     dense_delta_fraction: 0.001  # delta fraction for interface detection. default: 0.001
     max_failures: 5000  # maximum consecutive failure limit. default: 5000
-kaki:
-  default_planner_config: RRT
-  planner_configs:
-    - AnytimePathShortening
-    - SBL
-    - EST
-    - LBKPIECE
-    - BKPIECE
-    - KPIECE
-    - RRT
-    - RRTConnect
-    - RRTstar
-    - TRRT
-    - PRM
-    - PRMstar
-    - FMT
-    - BFMT
-    - PDST
-    - STRIDE
-    - BiTRRT
-    - LBTRRT
-    - BiEST
-    - ProjEST
-    - LazyPRM
-    - LazyPRMstar
-    - SPARS
-    - SPARStwo
-  projection_evaluator: joints(Joint2,Joint3)
-  longest_valid_segment_fraction: 0.005
 kanan:
   default_planner_config: RRT
   planner_configs:
@@ -186,7 +157,6 @@ kanan:
   projection_evaluator: joints(Joint4,Joint6)
   longest_valid_segment_fraction: 0.005
 kiri:
-  default_planner_config: RRT
   planner_configs:
     - AnytimePathShortening
     - SBL
@@ -214,65 +184,7 @@ kiri:
     - SPARStwo
   projection_evaluator: joints(Joint3,Joint5)
   longest_valid_segment_fraction: 0.005
-telapak_kaki:
-  default_planner_config: RRT
-  planner_configs:
-    - AnytimePathShortening
-    - SBL
-    - EST
-    - LBKPIECE
-    - BKPIECE
-    - KPIECE
-    - RRT
-    - RRTConnect
-    - RRTstar
-    - TRRT
-    - PRM
-    - PRMstar
-    - FMT
-    - BFMT
-    - PDST
-    - STRIDE
-    - BiTRRT
-    - LBTRRT
-    - BiEST
-    - ProjEST
-    - LazyPRM
-    - LazyPRMstar
-    - SPARS
-    - SPARStwo
-  projection_evaluator: joints(Joint13,Joint14)
-  longest_valid_segment_fraction: 0.005
-ext_kanan:
-  default_planner_config: RRT
-  planner_configs:
-    - AnytimePathShortening
-    - SBL
-    - EST
-    - LBKPIECE
-    - BKPIECE
-    - KPIECE
-    - RRT
-    - RRTConnect
-    - RRTstar
-    - TRRT
-    - PRM
-    - PRMstar
-    - FMT
-    - BFMT
-    - PDST
-    - STRIDE
-    - BiTRRT
-    - LBTRRT
-    - BiEST
-    - ProjEST
-    - LazyPRM
-    - LazyPRMstar
-    - SPARS
-    - SPARStwo
-  projection_evaluator: joints(Joint2,Joint4)
-  longest_valid_segment_fraction: 0.005
-ext_kiri:
+kaki_full:
   default_planner_config: RRT
   planner_configs:
     - AnytimePathShortening
