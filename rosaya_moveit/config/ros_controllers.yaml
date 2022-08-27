@@ -1,0 +1,442 @@
+kaki_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - Joint2
+    - Joint3
+    - Joint5
+    - Joint7
+    - Joint9
+    - Joint11
+    - Joint13
+    - Joint4
+    - Joint6
+    - Joint8
+    - Joint10
+    - Joint12
+    - Joint14
+  gains:
+    Joint2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint9:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint11:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint13:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint8:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint10:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint12:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint14:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+kanan_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - Joint4
+    - Joint6
+    - Joint8
+    - Joint10
+    - Joint12
+    - Joint14
+  gains:
+    Joint4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint8:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint10:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint12:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint14:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+kiri_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - Joint3
+    - Joint5
+    - Joint7
+    - Joint9
+    - Joint11
+    - Joint13
+  gains:
+    Joint3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint9:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint11:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint13:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+telapak_kaki_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - Joint13
+    - Joint14
+  gains:
+    Joint13:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint14:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+ext_kanan_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - Joint2
+    - Joint4
+    - Joint6
+    - Joint8
+    - Joint10
+    - Joint12
+    - Joint14
+  gains:
+    Joint2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint8:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint10:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint12:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint14:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+ext_kiri_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - Joint2
+    - Joint3
+    - Joint5
+    - Joint7
+    - Joint9
+    - Joint11
+    - Joint13
+  gains:
+    Joint2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint9:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint11:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint13:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+vel_kanan:
+  type: velocity_controllers/JointTrajectoryController
+  joints:
+    - Joint4
+    - Joint6
+    - Joint8
+    - Joint10
+    - Joint12
+    - Joint14
+  gains:
+    Joint4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint8:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint10:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint12:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint14:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+vel_kiri:
+  type: velocity_controllers/JointTrajectoryController
+  joints:
+    - Joint3
+    - Joint5
+    - Joint7
+    - Joint9
+    - Joint11
+    - Joint13
+  gains:
+    Joint3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint9:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint11:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint13:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+vel_ext_kanan:
+  type: velocity_controllers/JointTrajectoryController
+  joints:
+    - Joint2
+    - Joint4
+    - Joint6
+    - Joint8
+    - Joint10
+    - Joint12
+    - Joint14
+  gains:
+    Joint2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint8:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint10:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint12:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint14:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+vel_ext_kiri:
+  type: velocity_controllers/JointTrajectoryController
+  joints:
+    - Joint2
+    - Joint3
+    - Joint5
+    - Joint7
+    - Joint9
+    - Joint11
+    - Joint13
+  gains:
+    Joint2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint9:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint11:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    Joint13:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

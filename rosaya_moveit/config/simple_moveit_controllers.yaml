@@ -1,0 +1,118 @@
+controller_list:
+  - name: kaki_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Joint2
+      - Joint3
+      - Joint5
+      - Joint7
+      - Joint9
+      - Joint11
+      - Joint13
+      - Joint4
+      - Joint6
+      - Joint8
+      - Joint10
+      - Joint12
+      - Joint14
+  - name: kanan_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Joint4
+      - Joint6
+      - Joint8
+      - Joint10
+      - Joint12
+      - Joint14
+  - name: kiri_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Joint3
+      - Joint5
+      - Joint7
+      - Joint9
+      - Joint11
+      - Joint13
+  - name: telapak_kaki_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Joint13
+      - Joint14
+  - name: ext_kanan_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Joint2
+      - Joint4
+      - Joint6
+      - Joint8
+      - Joint10
+      - Joint12
+      - Joint14
+  - name: ext_kiri_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Joint2
+      - Joint3
+      - Joint5
+      - Joint7
+      - Joint9
+      - Joint11
+      - Joint13
+  - name: vel_kanan
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Joint4
+      - Joint6
+      - Joint8
+      - Joint10
+      - Joint12
+      - Joint14
+  - name: vel_kiri
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Joint3
+      - Joint5
+      - Joint7
+      - Joint9
+      - Joint11
+      - Joint13
+  - name: vel_ext_kanan
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Joint2
+      - Joint4
+      - Joint6
+      - Joint8
+      - Joint10
+      - Joint12
+      - Joint14
+  - name: vel_ext_kiri
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Joint2
+      - Joint3
+      - Joint5
+      - Joint7
+      - Joint9
+      - Joint11
+      - Joint13
