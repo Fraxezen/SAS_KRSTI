@@ -185,7 +185,6 @@ kiri:
   projection_evaluator: joints(Joint3,Joint5)
   longest_valid_segment_fraction: 0.005
 kaki_full:
-  default_planner_config: RRT
   planner_configs:
     - AnytimePathShortening
     - SBL

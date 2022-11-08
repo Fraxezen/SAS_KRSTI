@@ -6,6 +6,6 @@
 
   <!-- Load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" args="kanan_controller kiri_controller kaki_full_controller r_pos l_pos r_vel l_vel "/>
+    output="screen" args="kanan_controller kiri_controller kaki_full_controller "/>
 
 </launch>
