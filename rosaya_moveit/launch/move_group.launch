@@ -35,6 +35,7 @@
                 move_group/MoveGroupKinematicsService
                 move_group/ClearOctomapService
                 " />
+                
   -->
 
   <arg name="load_robot_description" default="false" />
