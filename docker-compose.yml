@@ -1,0 +1,13 @@
+version: "3.9"
+
+volumes:
+  pocketros-home:
+
+services:
+  pocketros:
+    image: ghcr.io/laxamore/pocketros:noetic-focal
+    volumes:
+      - pocketros-home:/home/pocketros
+      - ./:/home/pocketros/catkin_ws/src/SAS_KRSTI
+    ports:
+      - 8080:8080
