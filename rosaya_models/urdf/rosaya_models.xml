@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rosaya_models">
+  <link
+    name="Link1">
+    <inertial>
+      <origin
+        xyz="-0.0140451869769053 -0.000102443179340425 0.424212396380785"
+        rpy="0 0 0" />
+      <mass
+        value="0.264483114754865" />
+      <inertia
+        ixx="0.000377148965233947"
+        ixy="2.5994599532165E-08"
+        ixz="8.26900991274006E-06"
+        iyy="0.000206025340153957"
+        iyz="1.60054464463747E-07"
+        izz="0.000337797285188758" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link2">
+    <inertial>
+      <origin
+        xyz="0.0275163486490869 -0.000225038484028668 -0.0398526629439051"
+        rpy="0 0 0" />
+      <mass
+        value="0.266759815938641" />
+      <inertia
+        ixx="0.000201939143646351"
+        ixy="-2.02604473576346E-07"
+        ixz="2.92452499794774E-07"
+        iyy="6.97314124612398E-05"
+        iyz="6.70715099069118E-07"
+        izz="0.000208906968608255" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1"
+    type="revolute">
+    <origin
+      xyz="0.0150416145062784 -0.000145225937100715 0.375282029235617"
+      rpy="0.00310746977134566 0 -3.14159265358979" />
+    <parent
+      link="Link1" />
+    <child
+      link="Link2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit 
+      effort= "0" velocity="0" lower="-1" upper="1"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-0.6" soft_upper_limit="0.6" />
+  </joint>
+  <link
+    name="Link3">
+    <inertial>
+      <origin
+        xyz="-0.0108043634184127 2.16609979877824E-06 -0.0246321946172634"
+        rpy="0 0 0" />
+      <mass
+        value="0.141461102552141" />
+      <inertia
+        ixx="2.39627133598282E-05"
+        ixy="2.90037379199943E-09"
+        ixz="1.8274454421264E-07"
+        iyy="3.84330097232021E-05"
+        iyz="-3.81895596612324E-11"
+        izz="3.16699542466875E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2"
+    type="revolute">
+    <origin
+      xyz="0.0150417125919951 -0.00017124992576488 -0.0551096819554042"
+      rpy="0.00310746977134566 0 3.14159265358979" />
+    <parent
+      link="Link2" />
+    <child
+      link="Link3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit 
+      effort= "0" velocity="0" lower="-2" upper="2"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-1.5" soft_upper_limit="1.5" />
+  </joint>
+  <link
+    name="L_Link">
+    <inertial>
+      <origin
+        xyz="2.50323684336529E-07 7.44298438559027E-08 -0.009497265940245"
+        rpy="0 0 0" />
+      <mass
+        value="0.00620476919773645" />
+      <inertia
+        ixx="1.16709532356444E-06"
+        ixy="2.24128152883016E-14"
+        ixz="-1.31754042277062E-11"
+        iyy="4.70615058588181E-06"
+        iyz="-3.91750100003524E-12"
+        izz="4.36737368608336E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint3"
+    type="revolute">
+    <origin
+      xyz="0 0.045659264836335 -0.0460755308216049"
+      rpy="0 0 -0.000200463315012628" />
+    <parent
+      link="Link3" />
+    <child
+      link="L_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit 
+      effort= "0" velocity="0" lower="-1" upper="1"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-0.7" soft_upper_limit="0.7" />
+  </joint>
+  <link
+    name="L_Link1">
+    <inertial>
+      <origin
+        xyz="0.00657311272351697 -0.000309350747005263 -0.0151748569832827"
+        rpy="0 0 0" />
+      <mass
+        value="0.18639489707273" />
+      <inertia
+        ixx="7.83297449900637E-05"
+        ixy="3.05121819265623E-12"
+        ixz="-1.95916960725846E-07"
+        iyy="7.66987387899111E-05"
+        iyz="1.61633318765208E-07"
+        izz="4.72446830208299E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint5"
+    type="revolute">
+    <origin
+      xyz="-0.0317500000000014 0 -0.0339141545469447"
+      rpy="0.000537539761406673 0 0" />
+    <parent
+      link="L_Link" />
+    <child
+      link="L_Link1" />
+    <axis
+      xyz="-1 0 0" />
+    <limit 
+      effort= "0" velocity="0" lower="-0.7" upper="0.7"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-0.25" soft_upper_limit="0.25" />
+  </joint>
+  <link
+    name="L_Link2">
+    <inertial>
+      <origin
+        xyz="-0.000485947927418726 0.0245791199167028 -0.0913077482560078"
+        rpy="0 0 0" />
+      <mass
+        value="0.0990788181499382" />
+      <inertia
+        ixx="4.93824228389883E-05"
+        ixy="-2.94635540720296E-09"
+        ixz="-1.12132818777156E-07"
+        iyy="3.6564094548438E-05"
+        iyz="-1.06282556014619E-06"
+        izz="2.89120074625432E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint7"
+    type="revolute">
+    <origin
+      xyz="0.0317200000000001 -0.0244999999999996 0"
+      rpy="0 0 0" />
+    <parent
+      link="L_Link1" />
+    <child
+      link="L_Link2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit 
+      effort= "0" velocity="0" lower="-0.8" upper="2"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-0.45" soft_upper_limit="1.5" />
+  </joint>
+  <link
+    name="L_Link3">
+    <inertial>
+      <origin
+        xyz="0.00932898247433369 0.0260353980000009 -0.0336820846788216"
+        rpy="0 0 0" />
+      <mass
+        value="0.0193582268613659" />
+      <inertia
+        ixx="3.00375991900623E-05"
+        ixy="1.78753730372709E-20"
+        ixz="-4.16144772485329E-06"
+        iyy="2.14370365193727E-05"
+        iyz="1.96098359812431E-19"
+        izz="1.54337749522801E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint9"
+    type="revolute">
+    <origin
+      xyz="-0.000558037765886032 -0.00140000000000197 -0.112828252884564"
+      rpy="0 -0.000303003582677282 0" />
+    <parent
+      link="L_Link2" />
+    <child
+      link="L_Link3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit 
+      effort= "0" velocity="0" lower="-2.5" upper="0.5"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-2.2" soft_upper_limit="0.2" />
+  </joint>
+  <link
+    name="L_Link4">
+    <inertial>
+      <origin
+        xyz="0.0229326730067766 -0.0259869723493596 0.0153883242508742"
+        rpy="0 0 0" />
+      <mass
+        value="0.182895656171114" />
+      <inertia
+        ixx="7.53620801606469E-05"
+        ixy="9.74709752344958E-14"
+        ixz="-1.07043004505627E-06"
+        iyy="7.48745810421612E-05"
+        iyz="1.06447109761369E-06"
+        izz="4.69411945289824E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint11"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.0949999999999996"
+      rpy="0 -0.000302748335169453 3.14159265358979" />
+    <parent
+      link="L_Link3" />
+    <child
+      link="L_Link4" />
+    <axis
+      xyz="0 -1 0" />
+    <limit 
+      effort= "0" velocity="0" lower="-2." upper="1"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-1.62" soft_upper_limit="0.7" />
+  </joint>
+  <link
+    name="L_Link5">
+    <inertial>
+      <origin
+        xyz="-0.0279100000022213 -0.00784814161879391 -0.0292680262318618"
+        rpy="0 0 0" />
+      <mass
+        value="0.0728910331350744" />
+      <inertia
+        ixx="3.33197131957481E-05"
+        ixy="-2.71246541755995E-14"
+        ixz="-8.07357015135364E-16"
+        iyy="0.000102630001589937"
+        iyz="-1.64946572156077E-12"
+        izz="0.000132875198487612" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/L_Link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint13"
+    type="revolute">
+    <origin
+      xyz="0.0235999999999932 -0.0259999999999994 0"
+      rpy="0 0 0" />
+    <parent
+      link="L_Link4" />
+    <child
+      link="L_Link5" />
+    <axis
+      xyz="-1 0 0" />
+    <limit 
+      effort= "0" velocity="0" lower="-2" upper="2"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-1.58" soft_upper_limit="1.58" />
+  </joint>
+  <link
+    name="R_Link">
+    <inertial>
+      <origin
+        xyz="2.50323684322651E-07 7.44298438298818E-08 -0.009497265940245"
+        rpy="0 0 0" />
+      <mass
+        value="0.00620476919773645" />
+      <inertia
+        ixx="1.16709532356444E-06"
+        ixy="2.24128168484417E-14"
+        ixz="-1.31754042254942E-11"
+        iyy="4.70615058588182E-06"
+        iyz="-3.91750099867982E-12"
+        izz="4.36737368608336E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint4"
+    type="revolute">
+    <origin
+      xyz="0 -0.0456592648363355 -0.0460755308216101"
+      rpy="0 0 -0.000200463315012628" />
+    <parent
+      link="Link3" />
+    <child
+      link="R_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit 
+      effort= "0" velocity="0" lower="-1" upper="1"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-0.7" soft_upper_limit="0.7" />
+  </joint>
+  <link
+    name="R_Link1">
+    <inertial>
+      <origin
+        xyz="0.00657493812540676 0.000309357807021043 -0.0151748569832826"
+        rpy="0 0 0" />
+      <mass
+        value="0.18639489707273" />
+      <inertia
+        ixx="7.83297449900636E-05"
+        ixy="3.05121820196201E-12"
+        ixz="-1.95917088531604E-07"
+        iyy="7.6698738789911E-05"
+        iyz="-1.62133778034599E-07"
+        izz="4.72446830208299E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint6"
+    type="revolute">
+    <origin
+      xyz="-0.0317499999999999 0 -0.0339141545469453"
+      rpy="0.000537539765574113 0 0" />
+    <parent
+      link="R_Link" />
+    <child
+      link="R_Link1" />
+    <axis
+      xyz="-1 0 0" />
+    <limit 
+      effort= "0" velocity="0" lower="-0.7" upper="0.7"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-0.25" soft_upper_limit="0.25" />
+  </joint>
+  <link
+    name="R_Link2">
+    <inertial>
+      <origin
+        xyz="2.80111859402715E-05 0.0245791212735314 -0.0912599475740594"
+        rpy="0 0 0" />
+      <mass
+        value="0.0990788181535519" />
+      <inertia
+        ixx="4.93830312794501E-05"
+        ixy="2.31024992829368E-09"
+        ixz="7.60281236107224E-09"
+        iyy="3.65640945538293E-05"
+        iyz="-1.06282733006272E-06"
+        izz="2.89113990286086E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint8"
+    type="revolute">
+    <origin
+      xyz="0.031720000000165 0.0245000000000003 -4.90873395437297E-05"
+      rpy="0 0 -3.14159265358979" />
+    <parent
+      link="R_Link1" />
+    <child
+      link="R_Link2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit 
+      effort= "0" velocity="0" lower="-2" upper="0.8"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-1.5" soft_upper_limit="0.45" />
+  </joint>
+  <link
+    name="R_Link3">
+    <inertial>
+      <origin
+        xyz="-0.00932898252848983 0.0260353980000001 -0.0336820846638228"
+        rpy="0 0 0" />
+      <mass
+        value="0.0193582268613659" />
+      <inertia
+        ixx="3.00375992034434E-05"
+        ixy="-2.69594705243283E-20"
+        ixz="4.16144770137387E-06"
+        iyy="2.14370365193727E-05"
+        iyz="-1.88595165744634E-19"
+        izz="1.54337749388988E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint10"
+    type="revolute">
+    <origin
+      xyz="0 -0.0014000000000008 -0.11278054553733"
+      rpy="0 0 0" />
+    <parent
+      link="R_Link2" />
+    <child
+      link="R_Link3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit 
+      effort= "0" velocity="0" lower="-0.5" upper="2.5"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-0.2" soft_upper_limit="2.2" />
+  </joint>
+  <link
+    name="R_Link4">
+    <inertial>
+      <origin
+        xyz="-0.0229292401554875 -0.0259904059352682 0.0153884170261417"
+        rpy="0 0 0" />
+      <mass
+        value="0.182895656171117" />
+      <inertia
+        ixx="7.53620801606485E-05"
+        ixy="9.74709990804585E-14"
+        ixz="1.07371232224204E-06"
+        iyy="7.48745810421634E-05"
+        iyz="1.06118336765581E-06"
+        izz="4.69411945289827E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint12"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.0949999999999999"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="R_Link3" />
+    <child
+      link="R_Link4" />
+    <axis
+      xyz="0 -1 0" />
+    <limit 
+      effort= "0" velocity="0" lower="-1" upper="2"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-0.7" soft_upper_limit="1.62" />
+  </joint>
+  <link
+    name="R_Link5">
+    <inertial>
+      <origin
+        xyz="-0.0279100000022238 0.00784810174265635 -0.0292680262318556"
+        rpy="0 0 0" />
+      <mass
+        value="0.0728910331350756" />
+      <inertia
+        ixx="3.3319713195748E-05"
+        ixy="-2.71244792029117E-14"
+        ixz="-8.07324395262557E-16"
+        iyy="0.000102630001589938"
+        iyz="-1.64946573526789E-12"
+        izz="0.000132875198487613" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rosaya_models/meshes/R_Link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint14"
+    type="revolute">
+    <origin
+      xyz="-0.0235999999999946 -0.0260000000000017 0"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="R_Link4" />
+    <child
+      link="R_Link5" />
+    <axis
+      xyz="-1 0 0" />
+    <limit 
+      effort= "0" velocity="0" lower="-2" upper="2"/>
+    <safety_controller 
+      k_velocity="0" k_position="0" soft_lower_limit="-1.58" soft_upper_limit="1.58" />
+  </joint>
+</robot>
