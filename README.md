@@ -4,7 +4,7 @@
 - ros noetic [http://wiki.ros.org/noetic/Installation/Ubuntu](http://wiki.ros.org/noetic/Installation/Ubuntu), or [using docker](#using-docker)
 - moveit [install here](https://moveit.ros.org/install/)
 - track-ik kinematics solver [install here](https://ros-planning.github.io/moveit_tutorials/doc/trac_ik/trac_ik_tutorial.html)
-- [ros-noetic-joint-state-publisher](https://wiki.ros.org/joint_state_publisher)
+- [ros-noetic-robot-state-publisher](http://wiki.ros.org/robot_state_publisher)
 
 ## Using docker
 first install docker [here](https://docs.docker.com/engine/install/ubuntu/) if you don't have it already.
