@@ -40,13 +40,15 @@
     <arg name="debug" value="$(arg debug)"/>
   </include>
 
-  <!-- <include file="$(find dynamixel_workbench_controllers)/launch/dynamixel_controllers.launch"></include> -->
+  <!-- Run Dynamixel Controllers and publish joint_states to move_group node -->
+  <include file="$(find dynamixel_workbench_controllers)/launch/dynamixel_controllers.launch"></include>
 
   <!-- Run Robot State Publisher read joint_states from dynamixel and publish joint_states to move_group node -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"> 
     <remap from="joint_states" to="dynamixel_workbench/joint_states"/>
   </node>
 
+  <!-- Remap All topic from Controllers Action Server to each group planning names -->
   <node pkg="rosaya_controller" type="controller_action_server" name="kanan_controller" output="screen">
     <remap from="follow_joint_trajectory" to="kanan_controller/follow_joint_trajectory"/>
   </node>
@@ -56,5 +58,4 @@
   <node pkg="rosaya_controller" type="controller_action_server" name="badan_controller" output="screen">
     <remap from="follow_joint_trajectory" to="badan_controller/follow_joint_trajectory"/>
   </node>
-
 </launch>

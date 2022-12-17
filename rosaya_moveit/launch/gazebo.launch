@@ -3,7 +3,7 @@
   <arg name="paused" default="false"/>
   <arg name="gazebo_gui" default="true"/>
   <arg name="initial_joint_positions" doc="Initial joint configuration of the robot"
-       default=" -J Joint10 0 -J Joint11 0 -J Joint12 0 -J Joint13 0 -J Joint14 0 -J Joint2 0 -J Joint3 0 -J Joint4 0 -J Joint5 0 -J Joint6 0 -J Joint7 0 -J Joint8 0 -J Joint9 0"/>
+       default=" -J Joint10 0 -J Joint11 0 -J Joint12 0 -J Joint13 0 -J Joint14 0 -J Joint3 0 -J Joint4 0 -J Joint5 0 -J Joint6 0 -J Joint7 0 -J Joint8 0 -J Joint9 0"/>
 
   <!-- startup simulated world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -13,7 +13,7 @@
   </include>
 
   <!-- send robot urdf to param server -->
-  <param name="robot_description" textfile="$(find rosaya_moveit)/config/gazebo_rosaya.urdf" />
+  <param name="robot_description" textfile="$(find rosaya_models)/urdf/rosaya_models.urdf" />
 
   <!-- unpause only after loading robot model -->
   <arg name="unpause" value="$(eval '' if arg('paused') else '-unpause')" />

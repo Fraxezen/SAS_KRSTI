@@ -1,11 +1,11 @@
 moveit_setup_assistant_config:
   URDF:
     package: rosaya_models
-    relative_path: urdf/rosaya.urdf
+    relative_path: urdf/rosaya_models.urdf
     xacro_args: ""
   SRDF:
-    relative_path: config/rosaya.srdf
+    relative_path: config/rosaya_models.srdf
   CONFIG:
     author_name: Frx
-    author_email: Frx@gmail.com
-    generated_timestamp: 1661621845
+    author_email: riyanfadlillah@gmail.com
+    generated_timestamp: 1670501079

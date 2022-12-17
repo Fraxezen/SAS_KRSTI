@@ -157,6 +157,7 @@ kanan:
   projection_evaluator: joints(Joint4,Joint6)
   longest_valid_segment_fraction: 0.005
 kiri:
+  default_planner_config: RRT
   planner_configs:
     - AnytimePathShortening
     - SBL
@@ -184,8 +185,7 @@ kiri:
     - SPARStwo
   projection_evaluator: joints(Joint3,Joint5)
   longest_valid_segment_fraction: 0.005
-kaki_full:
-  default_planner_config: RRT
+badan:
   planner_configs:
     - AnytimePathShortening
     - SBL
@@ -211,5 +211,3 @@ kaki_full:
     - LazyPRMstar
     - SPARS
     - SPARStwo
-  projection_evaluator: joints(Joint2,Joint3)
-  longest_valid_segment_fraction: 0.005

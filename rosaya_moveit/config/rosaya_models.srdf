@@ -3,7 +3,7 @@
     This is a format for representing semantic information about the robot structure.
     A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
 -->
-<robot name="rosaya">
+<robot name="rosaya_models">
     <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
     <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
     <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
@@ -22,7 +22,6 @@
         <joint name="Joint10"/>
         <joint name="Joint12"/>
         <joint name="Joint14"/>
-        <chain base_link="R_Link" tip_link="R_Link5"/>
     </group>
     <group name="kiri">
         <link name="L_Link"/>
@@ -37,52 +36,18 @@
         <joint name="Joint9"/>
         <joint name="Joint11"/>
         <joint name="Joint13"/>
-        <chain base_link="L_Link" tip_link="L_Link5"/>
     </group>
-    <group name="kaki_full">
+    <group name="badan">
+        <link name="Link1"/>
+        <link name="Link2"/>
         <link name="Link3"/>
-        <link name="L_Link"/>
-        <link name="L_Link1"/>
-        <link name="L_Link2"/>
-        <link name="L_Link3"/>
-        <link name="L_Link4"/>
-        <link name="L_Link5"/>
-        <link name="R_Link"/>
-        <link name="R_Link1"/>
-        <link name="R_Link2"/>
-        <link name="R_Link3"/>
-        <link name="R_Link4"/>
-        <link name="R_Link5"/>
+        <joint name="base_link"/>
+        <joint name="Joint1"/>
         <joint name="Joint2"/>
-        <joint name="Joint3"/>
-        <joint name="Joint5"/>
-        <joint name="Joint7"/>
-        <joint name="Joint9"/>
-        <joint name="Joint11"/>
-        <joint name="Joint13"/>
-        <joint name="Joint4"/>
-        <joint name="Joint6"/>
-        <joint name="Joint8"/>
-        <joint name="Joint10"/>
-        <joint name="Joint12"/>
-        <joint name="Joint14"/>
+        <group name="kanan"/>
+        <group name="kiri"/>
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
-    <group_state name="berdiri" group="kaki_full">
-        <joint name="Joint10" value="0"/>
-        <joint name="Joint11" value="0"/>
-        <joint name="Joint12" value="0"/>
-        <joint name="Joint13" value="0"/>
-        <joint name="Joint14" value="0"/>
-        <joint name="Joint2" value="0"/>
-        <joint name="Joint3" value="0"/>
-        <joint name="Joint4" value="0"/>
-        <joint name="Joint5" value="0"/>
-        <joint name="Joint6" value="0"/>
-        <joint name="Joint7" value="0"/>
-        <joint name="Joint8" value="0"/>
-        <joint name="Joint9" value="0"/>
-    </group_state>
     <group_state name="berdiri" group="kanan">
         <joint name="Joint10" value="0"/>
         <joint name="Joint12" value="0"/>
@@ -99,9 +64,6 @@
         <joint name="Joint7" value="0"/>
         <joint name="Joint9" value="0"/>
     </group_state>
-    <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-    <end_effector name="r_tip" parent_link="R_Link5" group="kanan"/>
-    <end_effector name="l_tip" parent_link="L_Link5" group="kiri"/>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="base_link" type="fixed" parent_frame="world" child_link="Link1"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
