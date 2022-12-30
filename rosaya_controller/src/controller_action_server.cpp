@@ -64,8 +64,20 @@ public:
         for (goalTrajectoryPointsIterator = goalTrajectoryPoints.begin(); goalTrajectoryPointsIterator < goalTrajectoryPoints.end(); goalTrajectoryPointsIterator++)
         {
             std::stringstream goalTrajectoryPointPositionsStream;
-            std::copy(goalTrajectoryPointsIterator->positions.begin(), goalTrajectoryPointsIterator->positions.end(), std::ostream_iterator<double>(goalTrajectoryPointPositionsStream, " "));
-            ROS_INFO_STREAM(action_name.c_str() << ": Received New Planning, With Goal Points " << i_points << ": " << goalTrajectoryPointPositionsStream.str());
+            std::stringstream goalTrajectoryPointVelocitiesStream;
+            std::stringstream goalTrajectoryPointAccelerationsStream;
+            std::stringstream goalTrajectoryPointTFSStream;
+            std::copy(goalTrajectoryPointsIterator->positions.begin(), goalTrajectoryPointsIterator->positions.end(), std::ostream_iterator<double>(goalTrajectoryPointPositionsStream, ", "));
+            std::copy(goalTrajectoryPointsIterator->velocities.begin(), goalTrajectoryPointsIterator->velocities.end(), std::ostream_iterator<double>(goalTrajectoryPointVelocitiesStream, ", "));
+            std::copy(goalTrajectoryPointsIterator->accelerations.begin(), goalTrajectoryPointsIterator->accelerations.end(), std::ostream_iterator<double>(goalTrajectoryPointAccelerationsStream, ", "));
+            // std::copy(goalTrajectoryPointsIterator->time_from_start.begin(), goalTrajectoryPointsIterator->time_from_start.end(), std::ostream_iterator<double>(goalTrajectoryPointAccelerationsStream);
+            ROS_INFO_STREAM("motion : " << i_points << "\n" 
+                            "positions : [" << goalTrajectoryPointPositionsStream.str() <<"]" "\n" 
+                            "velocities : [" << goalTrajectoryPointVelocitiesStream.str() <<"]" "\n"
+                            "accelerations : [" << goalTrajectoryPointAccelerationsStream.str() <<"]");
+            // ROS_INFO_STREAM("positions : [" << goalTrajectoryPointPositionsStream.str() <<"]");
+            // ROS_INFO_STREAM("velocities : [" << goalTrajectoryPointVelocitiesStream.str() <<"]");
+            // ROS_INFO_STREAM("accelerations : [" << goalTrajectoryPointAccelerationsStream.str() <<"]");
             i_points++;
         }
         
