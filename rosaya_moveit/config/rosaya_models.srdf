@@ -100,13 +100,13 @@
         <joint name="Joint1" value="0"/>
         <joint name="Joint10" value="0.3"/>
         <joint name="Joint11" value="-0.2"/>
-        <joint name="Joint12" value="0.2"/>
+        <joint name="Joint12" value="0.18"/>
         <joint name="Joint13" value="0.21"/>
         <joint name="Joint14" value="0.15"/>
         <joint name="Joint2" value="0"/>
         <joint name="Joint3" value="0"/>
         <joint name="Joint4" value="0"/>
-        <joint name="Joint5" value="0.0525"/>
+        <joint name="Joint5" value="0.0725"/>
         <joint name="Joint6" value="0.15"/>
         <joint name="Joint7" value="0.1"/>
         <joint name="Joint8" value="-0.1"/>
@@ -175,6 +175,54 @@
         <joint name="Joint7" value="0.775"/>
         <joint name="Joint8" value="-0.775"/>
         <joint name="Joint9" value="-1.95"/>
+    </group_state>
+    <group_state name="t_3" group="badan">
+        <joint name="Joint1" value="0"/>
+        <joint name="Joint10" value="0.411"/>
+        <joint name="Joint11" value="-0.2"/>
+        <joint name="Joint12" value="0.2"/>
+        <joint name="Joint13" value="-0.15"/>
+        <joint name="Joint14" value="-0.2"/>
+        <joint name="Joint2" value="0"/>
+        <joint name="Joint3" value="0.05"/>
+        <joint name="Joint4" value="0.05"/>
+        <joint name="Joint5" value="-0.15"/>
+        <joint name="Joint6" value="-0.085"/>
+        <joint name="Joint7" value="-0.045"/>
+        <joint name="Joint8" value="-0.2055"/>
+        <joint name="Joint9" value="-0.115"/>
+    </group_state>
+    <group_state name="t_4" group="badan">
+        <joint name="Joint1" value="0"/>
+        <joint name="Joint10" value="0.3"/>
+        <joint name="Joint11" value="-0.1786"/>
+        <joint name="Joint12" value="0.2"/>
+        <joint name="Joint13" value="-0.15"/>
+        <joint name="Joint14" value="-0.2"/>
+        <joint name="Joint2" value="0"/>
+        <joint name="Joint3" value="-0.05"/>
+        <joint name="Joint4" value="-0.05"/>
+        <joint name="Joint5" value="-0.15"/>
+        <joint name="Joint6" value="-0.185"/>
+        <joint name="Joint7" value="0.2077"/>
+        <joint name="Joint8" value="-0.1"/>
+        <joint name="Joint9" value="-0.3822"/>
+    </group_state>
+    <group_state name="t_5" group="badan">
+        <joint name="Joint1" value="0"/>
+        <joint name="Joint10" value="0.3"/>
+        <joint name="Joint11" value="-0.1786"/>
+        <joint name="Joint12" value="0.2"/>
+        <joint name="Joint13" value="0.215"/>
+        <joint name="Joint14" value="0.15"/>
+        <joint name="Joint2" value="0"/>
+        <joint name="Joint3" value="-0.05"/>
+        <joint name="Joint4" value="-0.05"/>
+        <joint name="Joint5" value="0.0725"/>
+        <joint name="Joint6" value="0.085"/>
+        <joint name="Joint7" value="0.2077"/>
+        <joint name="Joint8" value="-0.1"/>
+        <joint name="Joint9" value="-0.3822"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="kanan" parent_link="R_Link5" group="kanan"/>
