@@ -40,3 +40,21 @@ controller_list:
       - Joint10
       - Joint12
       - Joint14
+  - name: kaki_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Joint2
+      - Joint3
+      - Joint5
+      - Joint7
+      - Joint9
+      - Joint11
+      - Joint13
+      - Joint4
+      - Joint6
+      - Joint8
+      - Joint10
+      - Joint12
+      - Joint14

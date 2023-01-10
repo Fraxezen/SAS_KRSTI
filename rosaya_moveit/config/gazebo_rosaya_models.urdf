@@ -47,11 +47,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint1" type="continuous">
+    <joint name="Joint1" type="revolute">
         <origin xyz="0.0150416145062784 -0.000145225937100715 0.375282029235617" rpy="0.00310746977134566 0 -3.14159265358979" />
         <parent link="Link1" />
         <child link="Link2" />
         <axis xyz="-1 0 0" />
+        <limit effort="0" velocity="0" lower="-1" upper="1" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-0.6" soft_upper_limit="0.6" />
     </joint>
     <link name="Link3">
         <inertial>
@@ -75,11 +77,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint2" type="continuous">
+    <joint name="Joint2" type="revolute">
         <origin xyz="0.0150417125919951 -0.00017124992576488 -0.0551096819554042" rpy="0.00310746977134566 0 3.14159265358979" />
         <parent link="Link2" />
         <child link="Link3" />
-        <axis xyz="0 0 1" />
+        <axis xyz="0 0 -1" />
+        <limit effort="0" velocity="0" lower="-2" upper="2" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-1.5" soft_upper_limit="1.5" />
     </joint>
     <link name="L_Link">
         <inertial>
@@ -103,11 +107,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint3" type="continuous">
+    <joint name="Joint3" type="revolute">
         <origin xyz="0 0.045659264836335 -0.0460755308216049" rpy="0 0 -0.000200463315012628" />
         <parent link="Link3" />
         <child link="L_Link" />
-        <axis xyz="0 0 1" />
+        <axis xyz="0 0 -1" />
+        <limit effort="0" velocity="0" lower="-1" upper="1" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-0.7" soft_upper_limit="0.7" />
     </joint>
     <link name="L_Link1">
         <inertial>
@@ -131,11 +137,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint5" type="continuous">
+    <joint name="Joint5" type="revolute">
         <origin xyz="-0.0317500000000014 0 -0.0339141545469447" rpy="0.000537539761406673 0 0" />
         <parent link="L_Link" />
         <child link="L_Link1" />
-        <axis xyz="1 0 0" />
+        <axis xyz="-1 0 0" />
+        <limit effort="0" velocity="0" lower="-0.7" upper="0.7" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-0.25" soft_upper_limit="0.25" />
     </joint>
     <link name="L_Link2">
         <inertial>
@@ -159,11 +167,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint7" type="continuous">
+    <joint name="Joint7" type="revolute">
         <origin xyz="0.0317200000000001 -0.0244999999999996 0" rpy="0 0 0" />
         <parent link="L_Link1" />
         <child link="L_Link2" />
-        <axis xyz="0 1 0" />
+        <axis xyz="0 -1 0" />
+        <limit effort="0" velocity="0" lower="-0.8" upper="2" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-0.45" soft_upper_limit="1.5" />
     </joint>
     <link name="L_Link3">
         <inertial>
@@ -187,11 +197,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint9" type="continuous">
+    <joint name="Joint9" type="revolute">
         <origin xyz="-0.000558037765886032 -0.00140000000000197 -0.112828252884564" rpy="0 -0.000303003582677282 0" />
         <parent link="L_Link2" />
         <child link="L_Link3" />
-        <axis xyz="0 1 0" />
+        <axis xyz="0 -1 0" />
+        <limit effort="0" velocity="0" lower="-2.5" upper="0.5" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-2.2" soft_upper_limit="0.2" />
     </joint>
     <link name="L_Link4">
         <inertial>
@@ -215,11 +227,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint11" type="continuous">
+    <joint name="Joint11" type="revolute">
         <origin xyz="0 0 -0.0949999999999996" rpy="0 -0.000302748335169453 3.14159265358979" />
         <parent link="L_Link3" />
         <child link="L_Link4" />
         <axis xyz="0 -1 0" />
+        <limit effort="0" velocity="0" lower="-2." upper="1" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-1.62" soft_upper_limit="0.7" />
     </joint>
     <link name="L_Link5">
         <inertial>
@@ -243,11 +257,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint13" type="continuous">
+    <joint name="Joint13" type="revolute">
         <origin xyz="0.0235999999999932 -0.0259999999999994 0" rpy="0 0 0" />
         <parent link="L_Link4" />
         <child link="L_Link5" />
         <axis xyz="-1 0 0" />
+        <limit effort="0" velocity="0" lower="-2" upper="2" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-1.58" soft_upper_limit="1.58" />
     </joint>
     <link name="R_Link">
         <inertial>
@@ -271,11 +287,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint4" type="continuous">
+    <joint name="Joint4" type="revolute">
         <origin xyz="0 -0.0456592648363355 -0.0460755308216101" rpy="0 0 -0.000200463315012628" />
         <parent link="Link3" />
         <child link="R_Link" />
-        <axis xyz="0 0 1" />
+        <axis xyz="0 0 -1" />
+        <limit effort="0" velocity="0" lower="-1" upper="1" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-0.7" soft_upper_limit="0.7" />
     </joint>
     <link name="R_Link1">
         <inertial>
@@ -299,11 +317,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint6" type="continuous">
+    <joint name="Joint6" type="revolute">
         <origin xyz="-0.0317499999999999 0 -0.0339141545469453" rpy="0.000537539765574113 0 0" />
         <parent link="R_Link" />
         <child link="R_Link1" />
-        <axis xyz="1 0 0" />
+        <axis xyz="-1 0 0" />
+        <limit effort="0" velocity="0" lower="-0.7" upper="0.7" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-0.25" soft_upper_limit="0.25" />
     </joint>
     <link name="R_Link2">
         <inertial>
@@ -327,11 +347,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint8" type="continuous">
+    <joint name="Joint8" type="revolute">
         <origin xyz="0.031720000000165 0.0245000000000003 -4.90873395437297E-05" rpy="0 0 -3.14159265358979" />
         <parent link="R_Link1" />
         <child link="R_Link2" />
         <axis xyz="0 -1 0" />
+        <limit effort="0" velocity="0" lower="-2" upper="0.8" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-1.5" soft_upper_limit="0.45" />
     </joint>
     <link name="R_Link3">
         <inertial>
@@ -355,11 +377,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint10" type="continuous">
+    <joint name="Joint10" type="revolute">
         <origin xyz="0 -0.0014000000000008 -0.11278054553733" rpy="0 0 0" />
         <parent link="R_Link2" />
         <child link="R_Link3" />
         <axis xyz="0 -1 0" />
+        <limit effort="0" velocity="0" lower="-0.5" upper="2.5" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-0.2" soft_upper_limit="2.2" />
     </joint>
     <link name="R_Link4">
         <inertial>
@@ -383,11 +407,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint12" type="continuous">
+    <joint name="Joint12" type="revolute">
         <origin xyz="0 0 -0.0949999999999999" rpy="0 0 3.14159265358979" />
         <parent link="R_Link3" />
         <child link="R_Link4" />
-        <axis xyz="0 1 0" />
+        <axis xyz="0 -1 0" />
+        <limit effort="0" velocity="0" lower="-1" upper="2" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-0.7" soft_upper_limit="1.62" />
     </joint>
     <link name="R_Link5">
         <inertial>
@@ -411,11 +437,13 @@
             </geometry>
         </collision>
     </link>
-    <joint name="Joint14" type="continuous">
+    <joint name="Joint14" type="revolute">
         <origin xyz="-0.0235999999999946 -0.0260000000000017 0" rpy="0 0 3.14159265358979" />
         <parent link="R_Link4" />
         <child link="R_Link5" />
         <axis xyz="-1 0 0" />
+        <limit effort="0" velocity="0" lower="-2" upper="2" />
+        <safety_controller k_velocity="0" k_position="0" soft_lower_limit="-1.58" soft_upper_limit="1.58" />
     </joint>
     <transmission name="trans_Joint1">
         <type>transmission_interface/SimpleTransmission</type>

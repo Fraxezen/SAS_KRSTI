@@ -21,7 +21,7 @@
   <arg name="use_rviz" default="true" />
 
   <!-- If needed, broadcast static tf for robot root -->
-  <node pkg="tf2_ros" type="static_transform_publisher" name="virtual_joint_broadcaster_0" args="0 0 0 0 0 0 world Link1" />
+  <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="virtual_joint_broadcaster_0" args="0 0 0 0 0 0 world Link1" /> -->
 
   <!-- Run the main MoveIt executable without trajectory execution (we do not have controllers configured by default) -->
   <include file="$(dirname)/../../rosaya_moveit/launch/move_group.launch">
@@ -57,5 +57,8 @@
   </node>
   <node pkg="rosaya_controller" type="controller_action_server" name="badan_controller" output="screen">
     <remap from="follow_joint_trajectory" to="badan_controller/follow_joint_trajectory"/>
+  </node>
+  <node pkg="rosaya_controller" type="controller_action_server" name="kaki_controller" output="screen">
+    <remap from="follow_joint_trajectory" to="kaki_controller/follow_joint_trajectory"/>
   </node>
 </launch>
