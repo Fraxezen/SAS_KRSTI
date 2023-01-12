@@ -496,9 +496,9 @@
     <axis
       xyz="-1 0 0" />
     <limit 
-      effort= "0" velocity="0" lower="-2" upper="2"/>
+      effort= "0" velocity="0" lower="-0.6" upper="0.6"/>
     <safety_controller 
-      k_velocity="0" k_position="0" soft_lower_limit="-1.58" soft_upper_limit="1.58" />
+      k_velocity="0" k_position="0" soft_lower_limit="-0.58" soft_upper_limit="0.58" />
   </joint>
   <link
     name="R_Link">
@@ -838,8 +838,8 @@
     <axis
       xyz="-1 0 0" />
     <limit 
-      effort= "0" velocity="0" lower="-2" upper="2"/>
+      effort= "0" velocity="0" lower="-0.6" upper="0.6"/>
     <safety_controller 
-      k_velocity="0" k_position="0" soft_lower_limit="-1.58" soft_upper_limit="1.58" />
+      k_velocity="0" k_position="0" soft_lower_limit="-0.58" soft_upper_limit="0.58" />
   </joint>
 </robot>

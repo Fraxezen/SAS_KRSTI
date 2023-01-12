@@ -55,6 +55,9 @@ public:
 
         result.error_code = result.SUCCESSFUL;
         ROS_INFO_STREAM("Current trajectory complete");
+        moveit::core::KinematicsBasePtr kinematics = moveit_group.getSolverInstance();
+        ROS_INFO_STREAM("IK solver used: " << kinematics->getSolverName());
+
         as.setSucceeded(result);
 
         std::stringstream goalTrajectoryPointPositionsString;

@@ -211,7 +211,33 @@ badan:
     - LazyPRMstar
     - SPARS
     - SPARStwo
-kaki:
+fullkiri:
+  planner_configs:
+    - AnytimePathShortening
+    - SBL
+    - EST
+    - LBKPIECE
+    - BKPIECE
+    - KPIECE
+    - RRT
+    - RRTConnect
+    - RRTstar
+    - TRRT
+    - PRM
+    - PRMstar
+    - FMT
+    - BFMT
+    - PDST
+    - STRIDE
+    - BiTRRT
+    - LBTRRT
+    - BiEST
+    - ProjEST
+    - LazyPRM
+    - LazyPRMstar
+    - SPARS
+    - SPARStwo
+fullkanan:
   default_planner_config: RRT
   planner_configs:
     - AnytimePathShortening
@@ -238,5 +264,3 @@ kaki:
     - LazyPRMstar
     - SPARS
     - SPARStwo
-  projection_evaluator: joints(Joint2,Joint3)
-  longest_valid_segment_fraction: 0.005

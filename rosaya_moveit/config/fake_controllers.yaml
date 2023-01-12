@@ -34,9 +34,10 @@ controller_list:
       - Joint10
       - Joint12
       - Joint14
-  - name: fake_kaki_controller
+  - name: fake_fullkiri_controller
     type: $(arg fake_execution_type)
     joints:
+      - Joint1
       - Joint2
       - Joint3
       - Joint5
@@ -44,6 +45,11 @@ controller_list:
       - Joint9
       - Joint11
       - Joint13
+  - name: fake_fullkanan_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - Joint1
+      - Joint2
       - Joint4
       - Joint6
       - Joint8
@@ -56,4 +62,8 @@ initial:  # Define initial robot poses per group
   - group: kiri
     pose: berdiri
   - group: badan
+    pose: berdiri
+  - group: fullkiri
+    pose: berdiri
+  - group: fullkanan
     pose: berdiri

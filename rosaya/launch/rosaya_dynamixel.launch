@@ -58,7 +58,10 @@
   <node pkg="rosaya_controller" type="controller_action_server" name="badan_controller" output="screen">
     <remap from="follow_joint_trajectory" to="badan_controller/follow_joint_trajectory"/>
   </node>
-  <node pkg="rosaya_controller" type="controller_action_server" name="kaki_controller" output="screen">
-    <remap from="follow_joint_trajectory" to="kaki_controller/follow_joint_trajectory"/>
+  <node pkg="rosaya_controller" type="controller_action_server" name="fullkiri_controller" output="screen">
+    <remap from="follow_joint_trajectory" to="fullkiri_controller/follow_joint_trajectory"/>
+  </node>
+  <node pkg="rosaya_controller" type="controller_action_server" name="fullkanan_controller" output="screen">
+    <remap from="follow_joint_trajectory" to="fullkanan_controller/follow_joint_trajectory"/>
   </node>
 </launch>
